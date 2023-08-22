@@ -2,3 +2,5 @@
 build
 **/build
 CMakeLists_bk.txt
+custom_test
+build_self
