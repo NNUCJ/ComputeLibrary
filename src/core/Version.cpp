@@ -28,10 +28,10 @@ namespace arm_compute
 #ifndef DOXYGEN_SKIP_THIS
 std::string build_information()
 {
-    static const std::string information =
-#include "arm_compute_version.embed"
-        ;
-    return information;
+    static const std::string information = "v0.0.1";
+// #include "arm_compute_version.embed"
+//         ;
+//     return information;
 }
 #endif /* DOXYGEN_SKIP_THIS */
 } // namespace arm_compute

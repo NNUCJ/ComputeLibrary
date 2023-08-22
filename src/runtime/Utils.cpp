@@ -34,9 +34,9 @@ namespace arm_compute
 namespace utils
 {
 #ifndef DOXYGEN_SKIP_THIS
-static const std::string information =
-#include "arm_compute_version.embed"
-    ;
+static const std::string information ="v0.0.1";
+// #include "arm_compute_version.embed"
+//     ;
 #endif /* DOXYGEN_SKIP_THIS */
 
 const std::string &string_from_scheduler_type(Scheduler::Type t)
