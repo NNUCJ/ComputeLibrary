@@ -348,13 +348,13 @@
 target_sources(
     arm_compute
     PRIVATE
-    c/AclContext.cpp
-	c/AclOperator.cpp
-	c/AclQueue.cpp
-	c/AclTensor.cpp
-	c/AclTensorPack.cpp
-	c/AclVersion.cpp
-	c/operators/AclActivation.cpp
+    # c/AclContext.cpp
+	# c/AclOperator.cpp
+	# c/AclQueue.cpp
+	# c/AclTensor.cpp
+	# c/AclTensorPack.cpp
+	# c/AclVersion.cpp
+	# c/operators/AclActivation.cpp
 	common/AllocatorWrapper.cpp
 	common/IOperator.cpp
 	common/ITensorV2.cpp
@@ -376,7 +376,7 @@ target_sources(
 	core/GPUTarget.cpp
 	core/Helpers.cpp
 	core/IAccessWindow.cpp
-	# core/IKernel.cpp
+	core/IKernel.cpp
 	core/ITensor.cpp
 	core/ITensorPack.cpp
 	# core/NEON/kernels/NEBatchNormalizationLayerKernel.cpp
@@ -636,22 +636,22 @@ target_sources(
 	core/Utils.cpp
 	core/Validate.cpp
 	core/Version.cpp
-	core/helpers/SoftmaxHelpers.cpp
-	core/helpers/WindowHelpers.cpp
-	core/utils/AssemblyUtils.cpp
-	core/utils/ScaleUtils.cpp
-	core/utils/helpers/fft.cpp
-	core/utils/helpers/tensor_transform.cpp
-	core/utils/io/FileHandler.cpp
-	core/utils/logging/FilePrinter.cpp
-	core/utils/logging/Helpers.cpp
-	core/utils/logging/Logger.cpp
-	core/utils/logging/LoggerRegistry.cpp
-	core/utils/misc/MMappedFile.cpp
-	core/utils/quantization/AsymmHelpers.cpp
-	cpu/CpuContext.cpp
-	cpu/CpuQueue.cpp
-	cpu/CpuTensor.cpp
+	# core/helpers/SoftmaxHelpers.cpp
+	# core/helpers/WindowHelpers.cpp
+	# core/utils/AssemblyUtils.cpp
+	# core/utils/ScaleUtils.cpp
+	# core/utils/helpers/fft.cpp
+	# core/utils/helpers/tensor_transform.cpp
+	# core/utils/io/FileHandler.cpp
+	# core/utils/logging/FilePrinter.cpp
+	# core/utils/logging/Helpers.cpp
+	# core/utils/logging/Logger.cpp
+	# core/utils/logging/LoggerRegistry.cpp
+	# core/utils/misc/MMappedFile.cpp
+	# core/utils/quantization/AsymmHelpers.cpp
+	# cpu/CpuContext.cpp
+	# cpu/CpuQueue.cpp
+	# cpu/CpuTensor.cpp
 	# cpu/kernels/CpuActivationKernel.cpp
 	# cpu/kernels/CpuAddKernel.cpp
 	# cpu/kernels/CpuAddMulAddKernel.cpp
@@ -859,16 +859,16 @@ target_sources(
 	runtime/Allocator.cpp
 	runtime/BlobLifetimeManager.cpp
 	runtime/BlobMemoryPool.cpp
-	runtime/CPP/CPPScheduler.cpp
-	runtime/CPP/ICPPSimpleFunction.cpp
+	# runtime/CPP/CPPScheduler.cpp
+	# runtime/CPP/ICPPSimpleFunction.cpp
 	runtime/CPP/SingleThreadScheduler.cpp
-	runtime/CPP/functions/CPPBoxWithNonMaximaSuppressionLimit.cpp
-	runtime/CPP/functions/CPPDetectionOutputLayer.cpp
-	runtime/CPP/functions/CPPDetectionPostProcessLayer.cpp
-	runtime/CPP/functions/CPPNonMaximumSuppression.cpp
-	runtime/CPP/functions/CPPPermute.cpp
-	runtime/CPP/functions/CPPTopKV.cpp
-	runtime/CPP/functions/CPPUpsample.cpp
+	# runtime/CPP/functions/CPPBoxWithNonMaximaSuppressionLimit.cpp
+	# runtime/CPP/functions/CPPDetectionOutputLayer.cpp
+	# runtime/CPP/functions/CPPDetectionPostProcessLayer.cpp
+	# runtime/CPP/functions/CPPNonMaximumSuppression.cpp
+	# runtime/CPP/functions/CPPPermute.cpp
+	# runtime/CPP/functions/CPPTopKV.cpp
+	# runtime/CPP/functions/CPPUpsample.cpp
 	runtime/IScheduler.cpp
 	runtime/ISimpleLifetimeManager.cpp
 	runtime/ITensorAllocator.cpp
@@ -963,10 +963,10 @@ target_sources(
 	# runtime/NEON/functions/NETranspose.cpp
 	# runtime/NEON/functions/NEUnstack.cpp
 	# runtime/NEON/functions/NEWinogradConvolutionLayer.cpp
-	runtime/OMP/OMPScheduler.cpp
+	# runtime/OMP/OMPScheduler.cpp
 	runtime/OffsetLifetimeManager.cpp
 	runtime/OffsetMemoryPool.cpp
-	# runtime/OperatorTensor.cpp
+	runtime/OperatorTensor.cpp
 	runtime/PoolManager.cpp
 	runtime/RuntimeContext.cpp
 	runtime/Scheduler.cpp

@@ -33,8 +33,12 @@ option(ARM_COMPUTE_BUILD_EXAMPLES "Build example programs" OFF)
 option(ARM_COMPUTE_BUILD_TESTING "Build tests" OFF)
 option(ARM_COMPUTE_CPPTHREADS "Enable C++11 threads backend" OFF)
 option(ARM_COMPUTE_OPENMP "Enable OpenMP backend" ON)
-option(BASIC_COMPONENT_TEST "Build custom example" OFF)
+option(BASIC_COMPONENT_TEST "Build custom example" ON)
 #
+if(BASIC_COMPONENT_TEST)
+  add_definitions(-DBASIC_COMPONENT_TEST)
+endif()
+
 if(ARM_COMPUTE_CPPTHREADS)
   add_definitions(-DARM_COMPUTE_CPP_SCHEDULER)
 endif()

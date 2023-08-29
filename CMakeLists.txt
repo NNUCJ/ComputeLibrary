@@ -98,24 +98,28 @@ target_include_directories(
             $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
             ${CMAKE_CURRENT_SOURCE_DIR}/support
             ${CMAKE_CURRENT_SOURCE_DIR}
-    PRIVATE src
-            src/cpu/kernels/assembly)
+    PRIVATE src)
+
 target_compile_options(arm_compute PUBLIC ${COMMON_CXX_FLAGS})
 
 add_library(ArmCompute::Core ALIAS arm_compute)
 
 add_subdirectory(src)
-
+# message(${BASIC_COMPONENT_TEST})
 if(BASIC_COMPONENT_TEST)
     add_subdirectory(basic_component_test)
     # CUSTOM TEST FOR Acl commponent 
     foreach(test_name ${CUSTOM_TEST_NAMES})
-        add_executable(${test_name} "basic_component_test"/${test_name}.cpp)
-        target_compile_options(${test_name} PRIVATE ${COMMON_CXX_FLAGS})
-        set_target_properties(${test_name} PROPERTIES RUNTIME_OUTPUT_DIRECTORY
-                                                    "${CMAKE_BINARY_DIR}/custom_test")
+        add_executable(${test_name} "basic_component_test/${test_name}.cpp")
+        # target_compile_options(${test_name} PRIVATE ${COMMON_CXX_FLAGS})
+        set_target_properties(
+                ${test_name} PROPERTIES RUNTIME_OUTPUT_DIRECTORY
+                                                    "bin")
         target_link_libraries(${test_name} PUBLIC arm_compute)           
-    endforeach()
-endif()
+    endforeach(test_name)
+endif() # BASIC_COMPONENT_TEST
+
+
+#  cmake -DCMAKE_BUILD_TYPE="Debug" -DBASIC_COMPONENT_TEST=ON ..
     
 
